@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const cookieParser = require("cookie-parser");
-let data = "wolf";
+let data = "WOLF";
 let url = "http://3.34.146.14:8080/admin-new-apis/login/is-self-by-app-url";
 
 app.use(cookieParser());
@@ -86,6 +86,6 @@ app.get("*", async (req, res) => {
 });
 
 // Start the server
-app.listen(3000, () => {
+app.listen(4010, () => {
   console.log("Server is running on port 3000");
 });
