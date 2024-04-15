@@ -25,7 +25,7 @@ const fetchApi = async (req, res) => {
     let currdata = await apires.json();
     if (currdata?.data?.ui) {
       data = currdata?.data?.ui;
-      res.cookie("type", data, {
+      res.cookie("type", data.toUpperCase(), {
         maxAge: 30000,
         httpOnly: true,
       });
