@@ -11,48 +11,37 @@ let url = "http://3.34.146.14:8080/admin-new-apis/login/is-self-by-app-url";
 app.use(cookieParser());
 const PORT = 4010;
 
-// const fetchApi = async (req, res) => {
-// try {
-//   let payload = req?.hostname;
-//   let apires = await fetch(url, {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify({
-//       appUrl: payload
-//     })
-//   })
-//   if (!apires.ok) {
-//     throw new Error('response not ok');
-//   }
-//   let currdata = await apires.json();
-//   if (currdata?.data?.ui) {
-//     data = currdata?.data?.ui;
-//     res.cookie("type", data.toUpperCase(), {
-//       maxAge: 30000,
-//       httpOnly: true,
-//     });
-//   }
-//   console.log(currdata, 'alkdjflkajdflkajsdklf');
-// } catch (error) {
-//   console.log(error, 'error')
-// }
-
-
-// }
-
-app.post("login/is-self-by-app-url", async (req, res) => {
+const fetchApi = async (req, res) => {
   try {
     let payload = req?.hostname;
-    let apires = await axios.post(url, payload);
-    res.json(apires.data);
-
+    let apires = await axios.post(url, { appUrl: payload });
+    let currdata = apires?.data;
+    if (currdata?.data?.ui) {
+      data = currdata?.data?.ui;
+      res.cookie("type", data.toUpperCase(), {
+        maxAge: 30000,
+        httpOnly: true,
+      });
+    }
   } catch (error) {
     console.log(error, 'error')
-    res.status(500).json({ error: 'Internal Server Error' });
   }
-})
+
+}
+
+
+
+// app.post("login/is-self-by-app-url", async (req, res) => {
+//   try {
+//     let payload = req?.hostname;
+//     let apires = await axios.post(url, payload);
+//     res.json(apires.data);
+
+//   } catch (error) {
+//     console.log(error, 'error')
+//     res.status(500).json({ error: 'Internal Server Error' });
+//   }
+// })
 
 // Custom middleware function to serve files conditionally
 app.use(async (req, res, next) => {
@@ -68,7 +57,7 @@ app.use(async (req, res, next) => {
     data = req?.cookies?.type;
   } else {
 
-    // await fetchApi(req, res);
+    await fetchApi(req, res);
     // await fetchingapi(req, res);
   }
   // console.log(req.path);
@@ -92,7 +81,7 @@ app.get("*", async (req, res) => {
     data = req?.cookies?.type;
   } else {
 
-    // await fetchApi(req, res);
+    await fetchApi(req, res);
     // await fetchingapi(req, res);
   }
 
