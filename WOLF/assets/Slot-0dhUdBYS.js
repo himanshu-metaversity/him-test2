@@ -1,1 +1,0 @@
-import{j as s}from"./index-SUo8xEJ1.js";import{u as r,U as t,W as i}from"./index-3X82S6Kz.js";import"./ResetPasswordDailog-S5QLUaSV.js";import"./App-iG37fEVl.js";function u(){const o=r("(max-width: 1210px)");return s.jsxs("div",{children:[o?null:s.jsx(t,{}),s.jsx(i,{filter:"slot"})]})}export{u as default};
