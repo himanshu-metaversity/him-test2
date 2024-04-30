@@ -6,7 +6,8 @@ const path = require("path");
 const app = express();
 const cookieParser = require("cookie-parser");
 let data = "WOLF";
-let url = "http://3.34.146.14:8080/admin-new-apis/login/is-self-by-app-url";
+// let url = "http://3.34.146.14:8080/admin-new-apis/login/is-self-by-app-url";
+let url = "https://adminapi.247idhub.com/admin-new-apis/login/is-self-by-app-url";
 
 app.use(cookieParser());
 const PORT = 4010;
