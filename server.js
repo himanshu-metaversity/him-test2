@@ -25,10 +25,10 @@ const fetchApi = async (req, res) => {
     console.log("Referer", req?.headers?.referer);
     console.log("Origin", req?.headers?.origin);
 
-	if (!payload) {
-		console.log(req);
-		return;
-	}
+    if (!payload) {
+      console.log(req);
+      return;
+    }
     let apires = await axios.post(url, { appUrl: payload.split('://')[1].split('/')[0] });
     let currdata = apires?.data;
     // console.log('currdata', currdata?.data)
@@ -79,7 +79,7 @@ app.use(async (req, res, next) => {
   }
   // console.log(req.path);
   // app.use(express.static("diamond"));
-  express.static(path.join(__dirname, data))(req, res, next);
+  express.static(path.join(__dirname, data || 'RELOAD'))(req, res, next);
   // next();
 });
 
@@ -102,7 +102,7 @@ app.get("*", async (req, res) => {
     // await fetchingapi(req, res);
   }
 
-  res.sendFile(path.join(__dirname, data, "index.html"), (err) => {
+  res.sendFile(path.join(__dirname, data || 'RELOAD', "index.html"), (err) => {
     if (err) {
       // Handle error if the file cannot be sent
       console.error("Error sending file:", err);
