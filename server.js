@@ -15,7 +15,7 @@ const PORT = 4010;
 const fetchApi = async (req, res) => {
   try {
     let payload = req?.hostname;
-    console.log('payload', payload)
+    console.log('payload', req)
     // let payload = '11bet24.com';
     let apires = await axios.post(url, { appUrl: payload });
     let currdata = apires?.data;
