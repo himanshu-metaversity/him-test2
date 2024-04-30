@@ -14,16 +14,17 @@ const PORT = 4010;
 
 const fetchApi = async (req, res) => {
   try {
-    let payload = req?.hostname;
-    console.log('payload', req)
-    console.log('origin', req?.headers?.origin)
-    console.log('req.get origin', req?.get('origin'))
+    let payload = req?.headers?.origin || '';
+
+    // console.log('payload', req)
+    // console.log('origin', req?.headers?.origin)
+    // console.log('req.get origin', req?.get('origin'))
     // console.log('req header origin', req?.get('origin'))
-    console.log('referer', req?.referer)
+    // console.log('referer', req?.referer)
     // let payload = '11bet24.com';
-    let apires = await axios.post(url, { appUrl: payload });
+    let apires = await axios.post(url, { appUrl: payload.split('://')[1] });
     let currdata = apires?.data;
-    console.log('currdata', currdata?.data)
+    // console.log('currdata', currdata?.data)
     if (currdata?.data?.ui) {
       data = currdata?.data?.ui;
       console.log('api res', data)
