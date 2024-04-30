@@ -14,7 +14,7 @@ const PORT = 4010;
 
 const fetchApi = async (req, res) => {
   try {
-    let payload = req?.headers?.referer || 'http://abc.com';
+    let payload = req?.headers?.referer || req?.headers?.origin || '';
 
     // console.log('payload', req)
     // console.log('origin', req?.headers?.origin)
@@ -22,8 +22,13 @@ const fetchApi = async (req, res) => {
     // console.log('req header origin', req?.get('origin'))
     // console.log('referer', req?.referer)
     // let payload = '11bet24.com';
-    console.log("origin", req?.headers?.referer);
-    // console.log("headers", req?.headers);
+    console.log("Referer", req?.headers?.referer);
+    console.log("Origin", req?.headers?.origin);
+
+	if (!payload) {
+		console.log(req);
+		return;
+	}
     let apires = await axios.post(url, { appUrl: payload.split('://')[1].split('/')[0] });
     let currdata = apires?.data;
     // console.log('currdata', currdata?.data)
