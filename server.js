@@ -14,11 +14,14 @@ const PORT = 4010;
 
 const fetchApi = async (req, res) => {
   try {
-    let payload = req?.hostname;
+    // let payload = req?.hostname;
+    let payload = '11bet24.com';
     let apires = await axios.post(url, { appUrl: payload });
     let currdata = apires?.data;
+    // console.log('currdata', currdata)
     if (currdata?.data?.ui) {
       data = currdata?.data?.ui;
+      console.log('api res', data)
       res.cookie("type", data.toUpperCase(), {
         maxAge: 30000,
         httpOnly: true,
@@ -53,7 +56,7 @@ app.use(async (req, res, next) => {
       maxAge: 900000,
       httpOnly: true,
     });
-    console.log(data, ui);
+    // console.log(data, ui);
   } else if (req?.cookies?.type) {
     data = req?.cookies?.type;
   } else {
