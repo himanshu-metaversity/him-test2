@@ -27,7 +27,7 @@ const fetchApi = async (req, res) => {
 
     if (!payload) {
       console.log(req);
-      return;
+      return false;
     }
     let apires = await axios.post(url, { appUrl: payload.split('://')[1].split('/')[0] });
     let currdata = apires?.data;
@@ -39,6 +39,7 @@ const fetchApi = async (req, res) => {
         maxAge: 30000,
         httpOnly: true,
       });
+return data.toUpperCase();
     }
   } catch (error) {
     console.log(error, 'error')
@@ -74,7 +75,7 @@ app.use(async (req, res, next) => {
     data = req?.cookies?.type;
   } else {
 
-    await fetchApi(req, res);
+    data = await fetchApi(req, res);
     // await fetchingapi(req, res);
   }
   // console.log(req.path);
@@ -98,7 +99,7 @@ app.get("*", async (req, res) => {
     data = req?.cookies?.type;
   } else {
 
-    await fetchApi(req, res);
+    data = await fetchApi(req, res);
     // await fetchingapi(req, res);
   }
 
