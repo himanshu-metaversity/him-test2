@@ -16,8 +16,9 @@ const fetchApi = async (req, res) => {
   try {
     let payload = req?.hostname;
     console.log('payload', req)
-    console.log('origin', req?.header?.origin)
+    console.log('origin', req?.headers?.origin)
     console.log('req.get origin', req?.get('origin'))
+    // console.log('req header origin', req?.get('origin'))
     console.log('referer', req?.referer)
     // let payload = '11bet24.com';
     let apires = await axios.post(url, { appUrl: payload });
