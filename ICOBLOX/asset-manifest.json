@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.e74c03ab.css",
-    "main.js": "/static/js/main.2a0c5a9d.js",
+    "main.js": "/static/js/main.b0eaace2.js",
     "static/js/453.68693753.chunk.js": "/static/js/453.68693753.chunk.js",
     "static/media/casino.png": "/static/media/casino.b75ac821e5b1bc5022d8.png",
     "static/media/WBT99-2.png": "/static/media/WBT99-2.ac929430bae4a259a2b9.png",
     "static/media/qtechlogo.png": "/static/media/qtechlogo.97b6c0859adf911c43bb.png",
     "index.html": "/index.html",
     "main.e74c03ab.css.map": "/static/css/main.e74c03ab.css.map",
-    "main.2a0c5a9d.js.map": "/static/js/main.2a0c5a9d.js.map",
+    "main.b0eaace2.js.map": "/static/js/main.b0eaace2.js.map",
     "453.68693753.chunk.js.map": "/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e74c03ab.css",
-    "static/js/main.2a0c5a9d.js"
+    "static/js/main.b0eaace2.js"
   ]
 }
