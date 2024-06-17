@@ -16,6 +16,7 @@ const fetchApi = async (req, res) => {
   // console.log(url, 'lkasjdflkasjdf')
   try {
     let payload = req?.headers?.referer || req?.headers?.origin || '';
+    // let payload = 'http://www.maggibook.com/';
     payload = payload.replace("www.", "");
     // console.log('payload', req)
     // console.log('origin', req?.headers?.origin)
@@ -30,8 +31,9 @@ const fetchApi = async (req, res) => {
       console.log(req);
       return false;
     }
-
+    console.log(payload, 'pay');
     let apires = await axios.post(url, { appUrl: payload.split('://')[1].split('/')[0] });
+    console.log(payload.split('://')[1].split('/')[0], '_payload')
 
     let currdata = apires?.data;
 
