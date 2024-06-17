@@ -13,9 +13,10 @@ app.use(cookieParser());
 const PORT = 4010;
 
 const fetchApi = async (req, res) => {
+  // console.log(url, 'lkasjdflkasjdf')
   try {
     let payload = req?.headers?.referer || req?.headers?.origin || '';
-
+    payload = payload.replace("www.", "");
     // console.log('payload', req)
     // console.log('origin', req?.headers?.origin)
     // console.log('req.get origin', req?.get('origin'))
@@ -29,9 +30,11 @@ const fetchApi = async (req, res) => {
       console.log(req);
       return false;
     }
+
     let apires = await axios.post(url, { appUrl: payload.split('://')[1].split('/')[0] });
+
     let currdata = apires?.data;
-    // console.log('currdata', currdata?.data)
+
     if (currdata?.data?.ui) {
       data = currdata?.data?.ui;
       console.log('api res', data)
@@ -39,7 +42,7 @@ const fetchApi = async (req, res) => {
         maxAge: 30000,
         httpOnly: true,
       });
-return data.toUpperCase();
+      return data.toUpperCase();
     }
   } catch (error) {
     console.log(error, 'error')
