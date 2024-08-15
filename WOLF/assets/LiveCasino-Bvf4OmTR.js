@@ -1,1 +1,0 @@
-import{j as i}from"./index-C2urTnlv.js";import{u as r,V as o,X as t}from"./index-DHHzlZYT.js";import"./ResetPasswordDailog-B5ncI7td.js";import"./App-l9fncWoQ.js";function u(){const s=r("(max-width: 1210px)");return i.jsxs("div",{children:[s?null:i.jsx(o,{}),i.jsx(t,{filter:"LIVECASINO"})]})}export{u as default};
