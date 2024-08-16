@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.27220d03.css",
+    "main.js": "/static/js/main.8d191a17.js",
+    "static/media/diamondexch2mob.png": "/static/media/diamondexch2mob.4f8a74583b231757fa16.png",
+    "static/media/diamondexchmob4.png": "/static/media/diamondexchmob4.5249b7c48122d9125804.png",
+    "static/media/diamondexchange2.png": "/static/media/diamondexchange2.98066a5d75a499f2cdda.png",
+    "static/media/diamondexch5mob.png": "/static/media/diamondexch5mob.ca0cab2078b63f3d4b99.png",
+    "static/media/diamondexchmob3.png": "/static/media/diamondexchmob3.d7999cbfd68b821abda4.png",
+    "static/media/diamondexch4.png": "/static/media/diamondexch4.ff5c7934bf677b85a856.png",
+    "static/media/diamondexch5.png": "/static/media/diamondexch5.aae0b448bd187d93817e.png",
+    "static/media/diamondexch1.png": "/static/media/diamondexch1.6dff72715fb86ef97bd7.png",
+    "static/media/diamondexch3.png": "/static/media/diamondexch3.eed204cec61292d292da.png",
+    "static/media/diamondexchangemob1.png": "/static/media/diamondexchangemob1.9c6cd90176390627d655.png",
+    "index.html": "/index.html",
+    "main.27220d03.css.map": "/static/css/main.27220d03.css.map",
+    "main.8d191a17.js.map": "/static/js/main.8d191a17.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.27220d03.css",
+    "static/js/main.8d191a17.js"
+  ]
+}
