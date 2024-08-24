@@ -1,1 +1,0 @@
-import{r as s,j as a}from"./index-C0044AMR.js";import{a6 as r}from"./App-BMsNc9Ue.js";const c=()=>{const[e,o]=s.useState({aboutus:""});return s.useEffect(()=>((async()=>{const{response:t}=await r.aboutUs();t&&o(t.data)})(),()=>{}),[]),a.jsx("div",{children:a.jsx("div",{dangerouslySetInnerHTML:{__html:e.aboutus||""}})})};export{c as default};

@@ -1,1 +1,0 @@
-import{r as e,j as r}from"./index-C0044AMR.js";import{a6 as s}from"./App-BMsNc9Ue.js";const d=()=>{const[n,o]=e.useState({termandcondition:""});return e.useEffect(()=>{(async()=>{const{response:t}=await s.termCondition();t&&o(t.data)})()},[]),r.jsx("div",{dangerouslySetInnerHTML:{__html:n.termandcondition||""}})};export{d as default};
