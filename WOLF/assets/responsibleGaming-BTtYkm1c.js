@@ -1,1 +1,0 @@
-import{r as s,j as n}from"./index-BMCjkweL.js";import{a5 as i}from"./App-Dt0di76K.js";const p=()=>{const[t,a]=s.useState({responsiblegaming:""});return s.useEffect(()=>((async()=>{const{response:e}=await i.responsibleGaming();e&&a(e.data)})(),()=>{}),[]),n.jsx("div",{dangerouslySetInnerHTML:{__html:t.responsiblegaming||""}})};export{p as default};
