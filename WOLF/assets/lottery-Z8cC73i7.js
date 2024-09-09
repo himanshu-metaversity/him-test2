@@ -1,0 +1,1 @@
+import{j as r}from"./index-CdyI7Ipi.js";import{u as s,V as o,X as e}from"./index-CnyhdLwv.js";import"./ResetPasswordDailog-CEZunZx7.js";import"./App--XLIhIJU.js";const x=()=>{const t=s("(max-width: 1210px)");return r.jsxs("div",{children:[t?null:r.jsx(o,{}),r.jsx(e,{filter:"lottery"})]})};export{x as default};
